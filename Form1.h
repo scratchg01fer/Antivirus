@@ -103,7 +103,8 @@ namespace Antivirus
 			this->textBox2->ReadOnly = true;
 			this->textBox2->Size = System::Drawing::Size(184, 20);
 			this->textBox2->TabIndex = 4;
-			this->textBox2->Text = S"Press Clean to annihilate viruses";
+			this->textBox2->Text = S"Press Clean to exterminate viruses";
+			this->textBox2->TextChanged += new System::EventHandler(this, textBox2_TextChanged);
 			// 
 			// Form1
 			// 
@@ -115,7 +116,8 @@ namespace Antivirus
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->button1);
 			this->Name = S"Form1";
-			this->Text = S"Form1";
+			this->Text = S"The Exterminator";
+			this->Load += new System::EventHandler(this, Form1_Load);
 			this->ResumeLayout(false);
 
 		}	
@@ -125,7 +127,15 @@ namespace Antivirus
 				 Scanner::Scan(di);
 			 }
 
-	};
+	private: System::Void textBox2_TextChanged(System::Object *  sender, System::EventArgs *  e)
+			 {
+			 }
+
+private: System::Void Form1_Load(System::Object *  sender, System::EventArgs *  e)
+		 {
+		 }
+
+};
 }
 
 

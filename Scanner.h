@@ -1,6 +1,6 @@
 using namespace System;
 using namespace System::IO;
-
+using namespace System::Diagnostics;
 
 class Scanner 
 {
